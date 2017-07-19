@@ -1,0 +1,251 @@
+/* header */
+
+header {
+    height: 2.25rem;
+    width: 100%;
+    background-image: url("../imgaes/headimg1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header-search img {
+    width: 0.25rem;
+    position: absolute;
+    right: 0.09rem;
+    top: 0.14rem;
+}
+
+
+/* nav */
+
+nav {
+    margin-bottom: 0.07rem;
+}
+
+
+/*首页滑动导航*/
+
+#topNav {
+    width: 100%;
+    overflow: hidden;
+    color: #666666;
+    /*margin-left: 12px;
+    margin-right: 12px;*/
+    /*font: 16px/32px hiragino sans gb, microsoft yahei, simsun;*/
+    /*border-bottom: 1px solid #f8f8f8;*/
+}
+
+#topNav .swiper-slide {
+    padding: 0 12px;
+    letter-spacing: 2px;
+    width: auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+#topNav .swiper-slide a {
+    transition: all .3s ease;
+    display: block;
+    color: #666666
+}
+
+#topNav .active a {
+    transform: scale(1.1);
+    color: #009966;
+    border-bottom: 0.05rem #009966 solid;
+    padding-bottom: 0.06rem;
+}
+
+
+/*footer*/
+
+footer {
+    height: 0.99rem;
+    background-color: #009966;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    font-size: 0.12rem;
+    line-height: 0.17rem;
+    margin-bottom: 0.02rem;
+}
+
+.foot {
+    padding-top: 0.16rem;
+}
+
+
+/*go to top*/
+
+.go-top {
+    transition: all 1s ease;
+    bottom: 2em;
+    right: 0.09rem;
+    color: #fff;
+    font-size: 26px;
+    display: none;
+    position: fixed;
+    text-decoration: none;
+    width: 0.26rem;
+    height: 0.26rem;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.angle-up {
+    width: 0.26rem;
+    height: 0.26rem;
+    transition: all 1s ease;
+}
+
+
+/* 内容区 */
+
+.index-show {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.index-carousel {
+    height: 1.62rem;
+    width: 100%;
+    background: #333;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+..swiper-pagination {
+    text-align: right;
+}
+
+.index-show li {
+    margin-bottom: 0.16rem;
+}
+
+.index-new {
+    width: 100%;
+    height: auto;
+    display: inline-block
+}
+
+
+/* 新闻1 */
+
+.index-new1-right h4 {
+    padding-left: 0.1rem;
+}
+
+.index-new1-tag {
+    padding-left: 0.1rem;
+}
+
+.index-new1-info {
+    padding-top: 0.14rem;
+}
+
+.index-title-date p {
+    color: #666666;
+    font-size: 0.1rem;
+}
+
+.tag-small {
+    border: 2px #009966 solid;
+    color: #009966;
+    height: 0.13rem;
+    display: block;
+    border-radius: 10px;
+    font-size: 0.09rem;
+    line-height: 0.13rem;
+    padding: 0.02rem 0.05rem;
+}
+
+h4 {
+    font-size: 0.136rem;
+    line-height: 0.2rem;
+    color: #333;
+}
+
+
+/* 新闻2 */
+
+.index-new2-info {
+    padding-top: 0.1rem;
+}
+
+.index-new-img-3 {
+    margin-top: 0.1rem;
+}
+
+.index-new-img-3 img {
+    width: 96%;
+}
+
+
+/* 新闻3 */
+
+.index-new3-img-2-left img {
+    border-radius: 0.0427rem;
+}
+
+.index-new3-img-2-pr {
+    padding-right: 0.05rem;
+}
+
+.index-new3-img-2-pl {
+    padding-left: 0.05rem;
+}
+
+.index-new3-img-2-left p {
+    padding-top: 0.1rem;
+    padding-left: 0.05rem;
+}
+
+.index-new3-img-2-right img {
+    border-radius: 0.0427rem;
+}
+
+.index-new3-img-2-right p {
+    padding-top: 0.1rem;
+    padding-left: 0.1rem;
+}
+
+.index-new3-img-title {
+    position: absolute;
+    top: 0.04rem;
+    left: 0;
+    background-color: #009966;
+    width: 0.3rem;
+    color: #fff;
+    border-radius: 0 0.09rem 0.09rem 0;
+    font-size: 0.085rem;
+    letter-spacing: 0.01rem;
+    line-height: 0.17rem;
+    height: 0.17rem;
+}
+
+.index-new3-img-title-1 {
+    position: absolute;
+    top: 0.04rem;
+    left: 0.05rem;
+    background-color: #009966;
+    width: 0.3rem;
+    color: #fff;
+    border-radius: 0 0.09rem 0.09rem 0;
+    font-size: 0.085rem;
+    letter-spacing: 0.01rem;
+    line-height: 0.17rem;
+    height: 0.17rem;
+}
+
+
+/* 新闻5 */
+
+.index-new5-img-left {
+    padding-right: 0.05rem;
+}
