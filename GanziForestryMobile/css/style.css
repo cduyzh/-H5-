@@ -3,16 +3,52 @@
     header {
         height: 2.25rem;
         width: 100%;
-        background-image: url("../imgaes/headimg1.png");
+        background-image: url("../imgaes/headimg.png");
         background-size: contain;
         background-repeat: no-repeat;
     }
     
-    .header-search img {
+    .logo img {
+        padding: 0.09rem 0 0 0.09rem;
+        width: 0.38rem;
+        display: inline-block;
+    }
+    
+    .logo-word img {
+        margin: 0.1rem 0 0 0.09rem;
+        width: 0.85rem;
+        display: inline-block;
+    }
+    
+    .search img {
         width: 0.25rem;
         position: absolute;
         right: 0.09rem;
         top: 0.14rem;
+    }
+    /* 轮播图分页样式修改 */
+    
+    .swiper-pagination-bullet {
+        background: #ccc;
+        opacity: unset;
+        border-radius: unset;
+        width: 0.09rem;
+        height: 0.02rem;
+    }
+    
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 0.05rem;
+    }
+    
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 0.13rem;
+    }
+    
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #009966;
     }
     /* 详情顶部 */
     
@@ -126,7 +162,6 @@
     .index-carousel {
         height: 1.62rem;
         width: 100%;
-        background: #333;
     }
     
     .swiper-container {
@@ -175,6 +210,10 @@
         font-size: 0.09rem;
         line-height: 0.13rem;
         padding: 0.02rem 0.05rem;
+    }
+    
+    .index-new3-zhuanlan p {
+        line-height: 0.2rem;
     }
     
     h4 {
@@ -301,7 +340,7 @@
         line-height: 0.27rem;
         color: #fff;
         width: 97%;
-        font-size: 0.085rem;
+        font-size: 0.13rem;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.98));
         border-radius: 0 0 0.0427rem 0.0427rem;
         padding: 0;
@@ -319,6 +358,10 @@
         width: 0.73rem;
         margin-right: 0.08rem;
         display: inline-block;
+    }
+    
+    .green {
+        color: #009966;
     }
     
     .green p {
@@ -418,10 +461,6 @@
         cursor: pointer;
     }
     
-    .yxly-overlay p {
-        padding: 0 0 0.1rem 0;
-    }
-    
     .yxly-img-2 {
         position: relative;
     }
@@ -454,4 +493,122 @@
         color: #fff;
         font-size: 0.15rem;
         line-height: 0.38rem;
+    }
+    
+    .people-info {
+        margin-top: 0.08rem;
+        font-size: 0.136rem;
+        padding: 0 0 0 0.05rem;
+    }
+    
+    .people-vote {
+        height: auto;
+        display: inline-block;
+    }
+    
+    .vote-num {
+        font-size: 0.15rem;
+        margin-right: 0.06rem;
+    }
+    
+    .dj-vote {
+        display: inline-block;
+        font-size: 0.136rem;
+        margin: 0 auto;
+        color: #fff;
+        background: #ff9900;
+        padding: 0.06rem 0.14rem;
+        border-radius: 0.5rem;
+        margin-top: 0.07rem;
+        margin-bottom: 0.16rem;
+    }
+    
+    .vote-area {
+        text-align: center;
+    }
+    /* 最美生态护林员 */
+    
+    .carsoul-area {
+        position: relative;
+        height: 1.55rem;
+        background: url("../imgaes/zuimei.png") no-repeat;
+        width: 100%;
+        background-size: contain;
+        height: 100%;
+        margin-bottom: 0.18rem;
+    }
+    
+    .zmhly-news-button {
+        color: #ff9900;
+        border: 2px solid #ff9900;
+        border-radius: 0.085rem;
+        width: 0.69rem;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.14rem;
+        position: absolute;
+        right: 38%;
+        bottom: 0;
+        cursor: pointer;
+    }
+    
+    .zmhly-news {
+        margin-bottom: 0.15rem;
+    }
+    
+    .zmhly-news-img {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    
+    .zmhly-news-head-bg {
+        background: url("../imgaes/zuimei2.png") no-repeat;
+        width: 0.95rem;
+        height: 100%;
+        background-size: contain;
+    }
+    
+    .zmhly-news-head-bg p {
+        color: #fff;
+        line-height: 0.39rem;
+        text-align: center;
+        font-size: 0.15rem;
+    }
+    
+    .zmhly-news-head {
+        height: 0.39rem;
+        margin-bottom: 0.08rem;
+    }
+    
+    .zmhly-news-word {
+        position: relative;
+    }
+    
+    .zmhly-news-word p {
+        letter-spacing: 0.01rem;
+    }
+    
+    .zuimei-banner {
+        margin-bottom: 0.41rem;
+    }
+    /* 公用样式待整合  */
+    
+    .overlay-p-default {
+        padding: 0 0 0.1rem 0.1rem;
+        color: #fff;
+    }
+    
+    .overlay-p-icon p {
+        padding: 0 0 0.1rem 0;
+    }
+    
+    .overlay-white {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 80%;
+        display: block;
+        width: 100%;
+        background: url("../imgaes/图层-0.png")
     }
