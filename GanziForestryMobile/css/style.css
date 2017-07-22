@@ -358,6 +358,7 @@
         width: 0.73rem;
         margin-right: 0.08rem;
         display: inline-block;
+        cursor: pointer;
     }
     
     .green {
