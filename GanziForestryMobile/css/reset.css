@@ -11,6 +11,8 @@ body {
     font-size: 14px;
     line-height: 0.24rem;
     font-family: "微软雅黑";
+    position: relative;
+    overflow: scroll;
 }
 
 form,
@@ -51,8 +53,16 @@ img {
     border: 0;
     vertical-align: middle;
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+}
+
+.swiper-wrapper img {
+    width: 100%;
+}
+
+.detail-title {
+    margin-bottom: 0.3rem;
 }
 
 ul,
@@ -123,7 +133,7 @@ a:hover {
 }
 
 *:focus {
-    outline: none
+    outline: none;
 }
 
 
