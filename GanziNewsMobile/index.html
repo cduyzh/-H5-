@@ -23,10 +23,10 @@
             <div class="fl languages-icon">
                 <img src="./images/icon_lang@2x.png">
             </div>
-            <div class="fr">
-                <img src="./images/icon_search@2x.png">
+            <div class="fr search-icon">
+                <a href="./search.html"> <img src="./images/icon_search@2x.png"></a>
             </div>
-            <div class="center">
+            <div class="center center-logo">
                 <img src="./images/logo@2x.png">
             </div>
             <div class="languages tl">
@@ -40,7 +40,7 @@
         <nav>
             <div id="topNav" class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide active"><a href="#">མདོ་འདུ།</a></div>
+                    <div style="padding-left: 0;" class="swiper-slide active"><a href="#">མདོ་འདུ།</a></div>
                     <div class="swiper-slide"><a href="#">དཔྱད་ཡིག་ཆ་འཕྲ</a></div>
                     <div class="swiper-slide"><a href="#">དམངས་འཚོ</a></div>
                     <div class="swiper-slide"><a href="#">ཚན་རིག་ཁྱབ་གདལ</a></div>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="index-show-content">
                             <div class="fl view-more">
-                                <p><a href="http://m.ganzixinwen.com">དཔྱད་ཡིག་ཆ་འཕྲ</a></p>
+                                <p><a href="./shiting-article.html">དཔྱད་ཡིག་ཆ་འཕྲ</a></p>
                             </div>
                             <div class="fl voice">
 
@@ -86,7 +86,7 @@
                         </div>
                         <div class="index-show-content">
                             <div class="fl view-more">
-                                <p><a href="http://m.ganzixinwen.com">དཔྱད་ཡིག་ཆ་འཕྲ</a></p>
+                                <p><a href="./图文详情.html">དཔྱད་ཡིག་ཆ་འཕྲ</a></p>
                             </div>
 
                             <div class="fr dianzan dianzan-count">
@@ -131,7 +131,7 @@
                         </div>
                         <div class="index-show-content">
                             <div class="fl view-more">
-                                <p><a href="http://m.ganzixinwen.com">དཔྱད་ཡིག་ཆ་འཕྲ</a></p>
+                                <p><a href="./zixun-article.html">དཔྱད་ཡིག་ཆ་འཕྲ</a></p>
                             </div>
                             <div class="center show-content-pic">
                                 <div class="center pic">
@@ -156,7 +156,7 @@
                         <div class="index-show-video img-1-big">
                             <img src="./images/jpg@2x.png">
                             <div class="overlay">
-                                <a href="#" class="expand"><img src="./images/play@2x.png" alt=""></a>
+                                <a href="./zixun-article-video.html" class="expand"><img src="./images/play@2x.png" alt=""></a>
                             </div>
                         </div>
                         <div class="index-show-content">
@@ -470,12 +470,11 @@
                     li.innerHTML = "<div class='pullUp tc'>没有内容了</div>";
                     el.append(li);
                     $(".loading").hide();
-                    // wrapper.refresh();
+                    wrapper.refresh();
                 }
                 // 重新加载复位：上拉加载更多
                 /****remember to refresh after action completed！！！   ---id.refresh(); --- ****/
             }, 1000);
-
         }
         // 顶部导航滑动
         var a;

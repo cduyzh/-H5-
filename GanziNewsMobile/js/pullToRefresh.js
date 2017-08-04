@@ -2,9 +2,9 @@ var refresher = {
     info: {
         // "pullDownLable": "下拉刷新",
         // "pullingDownLable": "释放立即刷新",
-        "pullUpLable": "上拉加载更多",
-        "pullingUpLable": "释放加载更多",
-        "loadingLable": "加载中..."
+        pullUpLable: "上拉加载更多",
+        pullingUpLable: "释放加载更多",
+        loadingLable: "加载中..."
     },
     init: function(parameter) {
         var wrapper = document.getElementById(parameter.id);
@@ -13,6 +13,7 @@ var refresher = {
         wrapper.appendChild(div);
         var scroller = wrapper.querySelector(".scroller");
         var list = wrapper.querySelector("#" + parameter.id + " ul");
+
         scroller.insertBefore(list, scroller.childNodes[0]);
         var pullDown = document.createElement("div");
         pullDown.className = "pullDown";
@@ -38,11 +39,24 @@ var refresher = {
         var pullDownOffset = pullDownEle.offsetHeight;
         var pullUpEle = wrapper.querySelector(".pullUp");
         var pullUpOffset = pullUpEle.offsetHeight;
-        this.scrollIt(parameter, pullDownEle, pullDownOffset, pullUpEle, pullUpOffset);
+        this.scrollIt(
+            parameter,
+            pullDownEle,
+            pullDownOffset,
+            pullUpEle,
+            pullUpOffset
+        );
     },
-    scrollIt: function(parameter, pullDownEle, pullDownOffset, pullUpEle, pullUpOffset) {
+    scrollIt: function(
+        parameter,
+        pullDownEle,
+        pullDownOffset,
+        pullUpEle,
+        pullUpOffset
+    ) {
         eval(
-            parameter.id + "= new iScroll(\
+            parameter.id +
+            "= new iScroll(\
 									parameter.id,\
 									 {\
 										 useTransition: true,\
@@ -67,29 +81,47 @@ var refresher = {
         //     pullDownEle.querySelector('.pullDownIcon').style.display = "block";
         //     e.minScrollY = -pullUpOffset;
         // }
-        if (e.scrollerH < e.wrapperH && e.y > e.maxScrollY - pullUpOffset && pullUpEle.className.match("flip") || e.scrollerH > e.wrapperH && e.y > e.maxScrollY - pullUpOffset && pullUpEle.className.match("flip")) {
+        if (
+            (e.scrollerH < e.wrapperH &&
+                e.y > e.maxScrollY - pullUpOffset &&
+                pullUpEle.className.match("flip")) ||
+            (e.scrollerH > e.wrapperH &&
+                e.y > e.maxScrollY - pullUpOffset &&
+                pullUpEle.className.match("flip"))
+        ) {
             pullUpEle.classList.remove("flip");
-            pullUpEle.querySelector('.pullUpLabel').innerHTML = refresher.info.pullUpLable;
+            pullUpEle.querySelector(".pullUpLabel").innerHTML =
+                refresher.info.pullUpLable;
         }
         // if (e.y > 0 && !pullUpEle.className.match('loading') && !pullDownEle.className.match('loading')) {
         //     pullDownEle.classList.add("flip");
         //     pullDownEle.querySelector('.pullDownLabel').innerHTML = refresher.info.pullingDownLable;
         //     e.minScrollY = 0;
         // }
-        if (e.scrollerH < e.wrapperH && e.y < (e.minScrollY - pullUpOffset) && !pullDownEle.className.match('loading') && !pullUpEle.className.match('loading') || e.scrollerH > e.wrapperH && e.y < (e.maxScrollY - pullUpOffset) && !pullDownEle.className.match('loading') && !pullUpEle.className.match('loading')) {
+        if (
+            (e.scrollerH < e.wrapperH &&
+                e.y < e.minScrollY - pullUpOffset &&
+                !pullDownEle.className.match("loading") &&
+                !pullUpEle.className.match("loading")) ||
+            (e.scrollerH > e.wrapperH &&
+                e.y < e.maxScrollY - pullUpOffset &&
+                !pullDownEle.className.match("loading") &&
+                !pullUpEle.className.match("loading"))
+        ) {
             pullUpEle.classList.add("flip");
-            pullUpEle.querySelector('.pullUpLabel').innerHTML = refresher.info.pullingUpLable;
+            pullUpEle.querySelector(".pullUpLabel").innerHTML =
+                refresher.info.pullingUpLable;
         }
-
     },
     onRelease: function(pullDownEle, pullUpEle) {
         // if (pullDownEle.className.match('loading')) {
         //     pullDownEle.classList.toggle("loading");
         //     pullDownEle.querySelector('.pullDownLabel').innerHTML = refresher.info.pullDownLable;
         // }
-        if (pullUpEle.className.match('loading')) {
+        if (pullUpEle.className.match("loading")) {
             pullUpEle.classList.toggle("loading");
-            pullUpEle.querySelector('.pullUpLabel').innerHTML = refresher.info.pullUpLable;
+            pullUpEle.querySelector(".pullUpLabel").innerHTML =
+                refresher.info.pullUpLable;
         }
     },
     onScrollEnd: function(pullDownEle, pullDownAction, pullUpEle, pullUpAction) {
@@ -99,11 +131,15 @@ var refresher = {
         //     pullDownEle.querySelector('.pullDownLabel').innerHTML = refresher.info.loadingLable;
         //     if (pullDownAction) pullDownAction();
         // }
-        if (pullUpEle.className.match('flip') && !pullUpEle.className.match('loading')) {
+        if (
+            pullUpEle.className.match("flip") &&
+            !pullUpEle.className.match("loading")
+        ) {
             pullUpEle.classList.add("loading");
             pullUpEle.classList.remove("flip");
-            pullUpEle.querySelector('.pullUpLabel').innerHTML = refresher.info.loadingLable;
+            pullUpEle.querySelector(".pullUpLabel").innerHTML =
+                refresher.info.loadingLable;
             if (pullUpAction) pullUpAction();
         }
     }
-}
+};
